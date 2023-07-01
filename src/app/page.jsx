@@ -67,7 +67,7 @@ const Home = () => {
             - Changes the traditional street food culture
           </p>
           <p className={styles.desc}>
-            - YoommY opens a new horizon for India's street food culture
+            - YoommY opens a new horizon for India&apos;s street food culture
           </p>
           <Button url="/business" text="See our works" />
         </div>
