@@ -13,7 +13,9 @@ const About = () => {
             Do not hesitate to contact us below,
           </h1>
           <h2 className={styles.imgDesc}>
-            +91 93190 58521 / medykim100@gmail.com
+            +91 93190 58521
+            <br />
+            medykim100@gmail.com
           </h2>
         </div>
       </div>

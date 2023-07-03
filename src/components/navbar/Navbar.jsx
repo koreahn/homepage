@@ -1,56 +1,77 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { useContext, useState } from "react";
 import styles from "./navbar.module.css";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
-
-const links = [
-  {
-    id: 1,
-    title: "Home",
-    url: "/",
-  },
-  {
-    id: 2,
-    title: "Business",
-    url: "/business",
-  },
-  // {
-  //   id: 3,
-  //   title: "Blog",
-  //   url: "/blog",
-  // },
-  {
-    id: 4,
-    title: "About Us",
-    url: "/about",
-  },
-  {
-    id: 5,
-    title: "Contact",
-    url: "/contact",
-  },
-  // {
-  //   id: 6,
-  //   title: "Dashboard",
-  //   url: "/dashboard",
-  // },
-];
+import { ThemeContext } from "@/context/ThemeContext";
+import { links } from "./data";
 
 const Navbar = () => {
+  const { mode } = useContext(ThemeContext);
+  const [showMenu, setShowMenu] = useState(false);
+
+  const setToggle = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.logo}>
         Street Tech Bros
       </Link>
-      <div className={styles.links}>
+      <div className={styles.menuContainer}>
         <DarkModeToggle />
-        {links.map((link) => (
-          <Link key={link.id} href={link.url} className={styles.link}>
-            {link.title}
-          </Link>
-        ))}
+
+        <div className={styles.burgerMenu} onClick={setToggle}>
+          <div
+            className={`${styles.burgerBar} ${
+              showMenu ? styles.clicked : styles.unclicked
+            }`}
+          />
+          <div
+            className={`${styles.burgerBar} ${
+              showMenu ? styles.clicked : styles.unclicked
+            }`}
+          />
+          <div
+            className={`${styles.burgerBar} ${
+              showMenu ? styles.clicked : styles.unclicked
+            }`}
+          />
+        </div>
+
+        <div
+          className={`${styles.menu} ${
+            showMenu ? styles.visible : styles.hidden
+          }`}
+          style={
+            mode === "light"
+              ? { backgroundColor: "white" }
+              : { backgroundColor: "#111" }
+          }
+        >
+          <div className={styles.sideLinks}>
+            {links.map((link) => (
+              <Link
+                key={link.id}
+                href={link.url}
+                className={styles.link}
+                onClick={setToggle}
+              >
+                {link.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className={styles.links}>
+          {links.map((link) => (
+            <Link key={link.id} href={link.url} className={styles.link}>
+              {link.title}
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );

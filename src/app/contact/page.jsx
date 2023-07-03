@@ -23,7 +23,7 @@ const Contact = () => {
           <textarea
             className={styles.textArea}
             placeholder="message"
-            cols="30"
+            // cols="30"
             rows="8"
           ></textarea>
           <div className={styles.btnContainer}>

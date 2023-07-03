@@ -46,3 +46,35 @@
   justify-content: flex-end;
   padding-top: 20px;
 }
+
+@media (max-width: 1024px) {
+  .textContainer {
+    flex-direction: column;
+  }
+
+  .imgTitle {
+    font-size: 24px;
+  }
+
+  .imgDesc {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .desc {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imgTitle {
+    font-size: 16px;
+  }
+
+  .imgDesc {
+    font-size: 8px;
+  }
+}

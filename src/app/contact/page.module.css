@@ -56,3 +56,9 @@
   display: flex;
   justify-content: flex-end;
 }
+
+@media (max-width: 1024px) {
+  .imgContainer {
+    display: none;
+  }
+}

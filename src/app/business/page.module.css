@@ -1,9 +1,5 @@
 /* .container {} */
 
-.mainTitle {
-  font-size: 70px;
-}
-
 .selectTitle {
   margin: 20px 0px;
   color: #53c28b;
@@ -12,12 +8,13 @@
 .items {
   display: flex;
   gap: 50px;
+  justify-content: center;
 }
 
 .item {
   border: 5px solid #bbb;
   border-radius: 5px;
-  width: 300px;
+  width: 250px;
   height: 400px;
   position: relative;
   background-size: cover !important;
@@ -53,4 +50,27 @@
   font-weight: 300;
   text-align: justify;
   margin: 20px 0px;
+}
+
+@media (max-width: 1200px) {
+  .items {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .desc {
+    font-size: 15px;
+  }
+
+  .item {
+    width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .desc {
+    font-size: 15px;
+    justify-content: center;
+  }
 }
