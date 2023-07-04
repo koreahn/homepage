@@ -5,7 +5,7 @@ import React, { useContext, useState } from "react";
 import styles from "./navbar.module.css";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 import { ThemeContext } from "@/context/ThemeContext";
-import { links } from "./data";
+import { navList } from "@/data/data";
 
 const Navbar = () => {
   const { mode } = useContext(ThemeContext);
@@ -52,7 +52,7 @@ const Navbar = () => {
           }
         >
           <div className={styles.sideLinks}>
-            {links.map((link) => (
+            {navList.map((link) => (
               <Link
                 key={link.id}
                 href={link.url}
@@ -66,7 +66,7 @@ const Navbar = () => {
         </div>
 
         <div className={styles.links}>
-          {links.map((link) => (
+          {navList.map((link) => (
             <Link key={link.id} href={link.url} className={styles.link}>
               {link.title}
             </Link>

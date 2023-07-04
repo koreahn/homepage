@@ -1,15 +1,57 @@
 import React from "react";
 // import Image from "next/image";
 // import Button from "@/components/Button/Button";
+import Link from "next/link";
 import styles from "./page.module.css";
-import { items } from "./data.js";
+import { businessList } from "@/data/data.js";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 const Category = ({ params }) => {
-  const data = items[params.category];
+  const data = businessList[params.category];
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.catTitle}>{params.category} Overview</h1>
+      <h1>Overview</h1>
+      <div className={styles.titleContainer}>
+        {Object.entries(businessList).map(([category, items]) => (
+          <Link key={category} href={`/business/${category}`}>
+            <h1
+              className={styles.catTitle}
+              style={
+                category !== params.category
+                  ? { fontSize: 18, opacity: 0.4 }
+                  : {}
+              }
+            >
+              {category}
+            </h1>
+          </Link>
+        ))}
+      </div>
+      <div className={styles.arrowContainer}>
+        {Object.entries(businessList).map(([category, items], id) => (
+          <>
+            {category === params.category && id !== 0 ? (
+              <Link
+                href={`/business/${Object.entries(businessList)[id - 1][0]}`}
+              >
+                <AiOutlineLeft className={styles.icon} />
+              </Link>
+            ) : null}
+            {category === params.category ? (
+              <h1 className={styles.catTitle}>{category}</h1>
+            ) : null}
+            {category === params.category &&
+            id + 1 !== Object.entries(businessList).length ? (
+              <Link
+                href={`/business/${Object.entries(businessList)[id + 1][0]}`}
+              >
+                <AiOutlineRight className={styles.icon} />
+              </Link>
+            ) : null}
+          </>
+        ))}
+      </div>
       <div className={styles.item}>
         <div className={styles.content}>
           {/* <h1 className={styles.title}>Test</h1> */}

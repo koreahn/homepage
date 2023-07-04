@@ -1,4 +1,75 @@
-export const items = {
+export const navList = [
+  {
+    id: 1,
+    title: "Home",
+    url: "/",
+  },
+  {
+    id: 2,
+    title: "Business",
+    url: "/business",
+  },
+  // {
+  //   id: 3,
+  //   title: "Blog",
+  //   url: "/blog",
+  // },
+  {
+    id: 4,
+    title: "About Us",
+    url: "/about",
+  },
+  {
+    id: 5,
+    title: "Contact",
+    url: "/contact",
+  },
+  // {
+  //   id: 6,
+  //   title: "Dashboard",
+  //   url: "/dashboard",
+  // },
+];
+
+export const homeList = [
+  // {
+  //   id: 1,
+  //   title: "Company",
+  //   url: "/YummY.jpeg",
+  //   contents: [
+  //     "A new concept of Micro Franchise",
+  //     "Changes the traditional street food culture",
+  //     "YoommY opens a new horizon for India's street food culture",
+  //   ],
+  // },
+  {
+    id: 2,
+    title: "Mission for YoommY project",
+    url: "/mission.jpg",
+    sub: "To make Street foods below",
+    contents: [
+      "Clean Food Cart",
+      "Legal location",
+      "Hygienic Foods",
+      "Consistency in Taste",
+      "Foods safety",
+      "Nice packaging",
+    ],
+  },
+  {
+    id: 3,
+    title: "Franchise",
+    url: "/franchise.jpg",
+    sub: "Now You are Shop-owner !!",
+    contents: [
+      "No basic requirements like,",
+      "Investment, Cooking skill, Knowledge, Experience",
+      "But only sales skills required on YoommY Platform",
+    ],
+  },
+];
+
+export const businessList = {
   Business: [
     {
       id: 1,

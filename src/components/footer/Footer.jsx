@@ -5,8 +5,14 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div className={styles.container}>
-      <div>© STREETTECH BROS PRIVATE LIMITED. All Rights Reserved.</div>
-      {/* <div className={styles.social}>
+      <div className={styles.contents}>
+        <div>© STREETTECH BROS PRIVATE LIMITED. All Rights Reserved.</div>
+        <div>
+          Address: 108, LGF-2, Sector 44, Gurgaon Sadar Bazar Haryana, India -
+          122001
+        </div>
+      </div>
+      <div className={styles.social}>
         <Image
           src="/facebook.png"
           width={15}
@@ -35,7 +41,7 @@ const Footer = () => {
           className={styles.icon}
           alt="youtube"
         />
-      </div> */}
+      </div>
     </div>
   );
 };
