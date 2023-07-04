@@ -18,8 +18,10 @@ const SubHome = ({ param }) => {
         <h1 className={styles.title}>{param.title}</h1>
         {param.sub && <h2 className={styles.title}>{param.sub}</h2>}
 
-        {param.contents.map((content) => (
-          <p className={styles.desc}>- {content}</p>
+        {param.contents.map((content, id) => (
+          <p key={id} className={styles.desc}>
+            - {content}
+          </p>
         ))}
       </div>
     </div>
