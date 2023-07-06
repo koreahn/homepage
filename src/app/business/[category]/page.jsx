@@ -28,26 +28,28 @@ const Category = ({ params }) => {
           </Link>
         ))}
       </div>
-      {/* <div className={styles.arrowContainer}> */}
-      {Object.entries(businessList).map(([category, items], id) => (
-        <div key={id} className={styles.arrowContainer}>
-          {category === params.category && id !== 0 ? (
-            <Link href={`/business/${Object.entries(businessList)[id - 1][0]}`}>
-              <AiOutlineLeft className={styles.icon} />
-            </Link>
-          ) : null}
-          {category === params.category ? (
-            <h1 className={styles.catTitle}>{category}</h1>
-          ) : null}
-          {category === params.category &&
-          id + 1 !== Object.entries(businessList).length ? (
-            <Link href={`/business/${Object.entries(businessList)[id + 1][0]}`}>
-              <AiOutlineRight className={styles.icon} />
-            </Link>
-          ) : null}
-        </div>
-      ))}
-      {/* </div> */}
+      {Object.entries(businessList).map(
+        ([category, items], id) =>
+          category === params.category && (
+            <div key={id} className={styles.arrowContainer}>
+              {id !== 0 ? (
+                <Link
+                  href={`/business/${Object.entries(businessList)[id - 1][0]}`}
+                >
+                  <AiOutlineLeft className={styles.icon} />
+                </Link>
+              ) : null}
+              <h1 className={styles.catTitle}>{category}</h1>
+              {id + 1 !== Object.entries(businessList).length ? (
+                <Link
+                  href={`/business/${Object.entries(businessList)[id + 1][0]}`}
+                >
+                  <AiOutlineRight className={styles.icon} />
+                </Link>
+              ) : null}
+            </div>
+          )
+      )}
       <div className={styles.item}>
         <div className={styles.content}>
           {/* <h1 className={styles.title}>Test</h1> */}
