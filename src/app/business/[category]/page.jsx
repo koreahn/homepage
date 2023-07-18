@@ -8,9 +8,13 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 const Category = ({ params }) => {
   const data = businessList[params.category];
+  console.log(params.category);
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      // style={params.category === "Business" ? { height: "100%" } : {}}
+    >
       <h1>Overview</h1>
       <div className={styles.titleContainer}>
         {Object.entries(businessList).map(([category, items]) => (
@@ -28,7 +32,7 @@ const Category = ({ params }) => {
           </Link>
         ))}
       </div>
-      {Object.entries(businessList).map(
+      {/* {Object.entries(businessList).map(
         ([category, items], id) =>
           category === params.category && (
             <div key={id} className={styles.arrowContainer}>
@@ -49,7 +53,25 @@ const Category = ({ params }) => {
               ) : null}
             </div>
           )
-      )}
+      )} */}
+
+      <div className={styles.arrowContainer}>
+        {Object.entries(businessList).map(([category, items]) => (
+          <Link key={category} href={`/business/${category}`}>
+            <h2
+              className={styles.catTitle}
+              style={
+                category !== params.category
+                  ? { fontSize: 12, opacity: 0.4 }
+                  : {}
+              }
+            >
+              {category}
+            </h2>
+          </Link>
+        ))}
+      </div>
+
       <div className={styles.item}>
         <div className={styles.content}>
           {/* <h1 className={styles.title}>Test</h1> */}

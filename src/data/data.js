@@ -119,6 +119,10 @@ export const businessList = {
       id: 2,
       content: "Jugaad – “Easier, Faster and Cheaper”",
     },
+    {
+      id: 3,
+      content: "\n\n\n\n\n\n\n\n",
+    },
   ],
   Market: [
     {
@@ -148,6 +152,11 @@ export const businessList = {
       content:
         "Reference Article (Indian Street Vendor Market : The Sunrise Sector of Food Tech)",
       url: "https://www.linkedin.com/pulse/indian-street-vendor-market-sunrise-sector-food-tech-hokart?trk=organization-update-content_share-article",
+    },
+    ,
+    {
+      id: 7,
+      content: "\n",
     },
   ],
 };

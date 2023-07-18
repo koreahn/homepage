@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  height: 100%;
   align-items: flex-start;
   justify-content: flex-start;
   margin-top: auto;
@@ -21,9 +21,11 @@
 .arrowContainer {
   display: none;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center;
   color: #53c28b;
-  gap: 20px;
+  gap: 20px; */
+  justify-content: space-between;
+  align-items: center;
   margin-top: 20px;
 }
 
@@ -75,6 +77,7 @@
   font-weight: 300;
   text-align: justify;
   /* margin: 20px 0px; */
+  white-space: pre-wrap;
 }
 
 @media (max-width: 768px) {

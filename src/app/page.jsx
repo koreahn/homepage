@@ -37,6 +37,7 @@ const Home = () => {
       {homeList.map((content) => (
         <SubHome key={content.id} param={content} />
       ))}
+      <Button url="/business" text="know more" />
     </div>
   );
 };

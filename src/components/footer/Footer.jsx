@@ -8,8 +8,7 @@ const Footer = () => {
       <div className={styles.contents}>
         <div>© STREETTECH BROS PRIVATE LIMITED. All Rights Reserved.</div>
         <div>
-          Address: 108, LGF-2, Sector 44, Gurgaon Sadar Bazar Haryana, India -
-          122001
+          108, LGF-2, Sector 44, Gurgaon Sadar Bazar Haryana, India - 122001
         </div>
       </div>
       <div className={styles.social}>
