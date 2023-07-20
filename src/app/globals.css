@@ -41,6 +41,10 @@ a {
   justify-content: space-between;
 }
 
+.bodyContainer {
+  margin-top: 100px; /* 네비게이션 바의 높이에 맞게 변경 */
+}
+
 @media (max-width: 480px) {
   .container {
     padding: 0 30px;

@@ -16,10 +16,27 @@ const Navbar = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <Link href="/" className={styles.logo}>
-        Street Tech Bros
-      </Link>
+    <div
+      className={styles.container}
+      style={
+        mode === "light"
+          ? {
+              backgroundColor: "white",
+              color: "#111",
+              transition: "1s all ease",
+            }
+          : {
+              backgroundColor: "#111",
+              color: "#bbb",
+              transition: "1s all ease",
+            }
+      }
+    >
+      <div>
+        <Link href="/" className={styles.logo}>
+          Street Tech Bros
+        </Link>
+      </div>
       <div className={styles.menuContainer}>
         <DarkModeToggle />
 

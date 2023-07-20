@@ -52,6 +52,26 @@
   font-weight: bold;
 }
 
+.errorInput,
+.errorTextArea {
+  padding: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #bbb;
+  border: 1px solid red;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.errorText {
+  color: red;
+  font-size: 10;
+  align-self: stretch;
+  margin-bottom: 10;
+  margin-top: -10;
+}
+
 .btnContainer {
   display: flex;
   justify-content: flex-end;

@@ -8,7 +8,6 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 const Category = ({ params }) => {
   const data = businessList[params.category];
-  console.log(params.category);
 
   return (
     <div
