@@ -19,7 +19,7 @@ const useOnScreen = (ref, threshold = 0) => {
         observer.unobserve(ref.current);
       }
     };
-  }, [ref]);
+  }, [ref, threshold, isIntersecting]);
   return isIntersecting;
 };
 export default useOnScreen;

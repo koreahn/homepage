@@ -1,6 +1,6 @@
-import React from "react";
+"use client";
 import styles from "./page.module.css";
-import Link from "next/link";
+// import Link from "next/link";
 import Category from "./[category]/page";
 
 const Business = () => {

@@ -1,10 +1,8 @@
 "use client";
 import { useRef } from "react";
 import styles from "./page.module.css";
-import Home from "./home/page";
-// import { navList } from "@/data/data";
-// import Section from "@/components/Section/page";
 import useOnScreen from "@/hooks/useOnScreen";
+import Home from "./home/page";
 import Business from "./business/page";
 import About from "./about/page";
 import Contact from "./contact/page";
@@ -45,14 +43,6 @@ const Main = () => {
       >
         <Contact />
       </div>
-      {/* {navList.map(
-        (link) =>
-          link.linkId !== "home" && (
-            // <div key={link.id} id={link.linkId}>
-            <Section key={link.id} pageId={link.linkId} />
-            // </div>
-          )
-      )} */}
     </div>
   );
 };

@@ -1,5 +1,5 @@
-import React, { Link } from "react";
-import Image from "next/image";
+"use client";
+// import Image from "next/image";
 import styles from "./page.module.css";
 import Button from "@/components/Button/Button";
 import { homeList } from "@/data/data";
@@ -37,7 +37,6 @@ const Home = () => {
       {homeList.map((content) => (
         <SubHome key={content.id} param={content} />
       ))}
-      {/* <Button url="business" text="know more" /> */}
     </div>
   );
 };

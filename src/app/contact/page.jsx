@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";

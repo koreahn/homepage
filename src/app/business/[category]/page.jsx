@@ -2,11 +2,11 @@
 import { useState } from "react";
 // import Image from "next/image";
 // import Button from "@/components/Button/Button";
-import Link from "next/link";
+// import Link from "next/link";
 import styles from "./page.module.css";
 import { businessList } from "@/data/data.js";
 // import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import { animateScroll as scroll } from "react-scroll";
+// import { animateScroll as scroll } from "react-scroll";
 
 const Category = ({ params }) => {
   const [title, setTitle] = useState(params.category);
