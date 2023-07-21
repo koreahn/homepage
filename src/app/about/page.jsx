@@ -6,6 +6,7 @@ import Button from "@/components/Button/Button";
 const About = () => {
   return (
     <div className={styles.container}>
+      <h1 className={styles.selectTitle}>About Us</h1>
       <div className={styles.imgContainer}>
         <Image src="/about.jpg" fill={true} alt="" className={styles.img} />
         <div className={styles.imgText}>
@@ -43,9 +44,9 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className={styles.btnContainer}>
+      {/* <div className={styles.btnContainer}>
         <Button url="contact" text="Contact" />
-      </div>
+      </div> */}
     </div>
   );
 };

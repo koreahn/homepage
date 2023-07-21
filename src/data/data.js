@@ -3,32 +3,26 @@ export const navList = [
     id: 1,
     title: "Home",
     url: "/",
+    linkId: "home",
   },
   {
     id: 2,
     title: "Business",
     url: "/business",
+    linkId: "business",
   },
-  // {
-  //   id: 3,
-  //   title: "Blog",
-  //   url: "/blog",
-  // },
   {
     id: 4,
     title: "About Us",
     url: "/about",
+    linkId: "about",
   },
   {
     id: 5,
     title: "Contact",
     url: "/contact",
+    linkId: "contact",
   },
-  // {
-  //   id: 6,
-  //   title: "Dashboard",
-  //   url: "/dashboard",
-  // },
 ];
 
 export const homeList = [
@@ -119,10 +113,6 @@ export const businessList = {
       id: 2,
       content: "Jugaad – “Easier, Faster and Cheaper”",
     },
-    {
-      id: 3,
-      content: "\n\n\n\n\n\n\n\n",
-    },
   ],
   Market: [
     {
@@ -135,11 +125,11 @@ export const businessList = {
         "The number of India Street food vendors are 10 million in 40bn dollar market size in a year",
     },
     {
-      id: 4,
+      id: 3,
       content: "Foods service market size is 60bn dollar",
     },
     {
-      id: 5,
+      id: 4,
       content: "Food tech market size is 45mn dollar",
     },
     {
@@ -152,11 +142,6 @@ export const businessList = {
       content:
         "Reference Article (Indian Street Vendor Market : The Sunrise Sector of Food Tech)",
       url: "https://www.linkedin.com/pulse/indian-street-vendor-market-sunrise-sector-food-tech-hokart?trk=organization-update-content_share-article",
-    },
-    ,
-    {
-      id: 7,
-      content: "\n",
     },
   ],
 };

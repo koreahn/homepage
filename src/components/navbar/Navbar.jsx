@@ -6,6 +6,7 @@ import styles from "./navbar.module.css";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 import { ThemeContext } from "@/context/ThemeContext";
 import { navList } from "@/data/data";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const { mode } = useContext(ThemeContext);
@@ -70,23 +71,47 @@ const Navbar = () => {
         >
           <div className={styles.sideLinks}>
             {navList.map((link) => (
-              <Link
+              // <Link
+              //   key={link.id}
+              //   href={link.url}
+              //   className={styles.link}
+              //   onClick={setToggle}
+              // >
+              //   {link.title}
+              // </Link>
+              <ScrollLink
+                to={link.linkId}
                 key={link.id}
-                href={link.url}
                 className={styles.link}
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
                 onClick={setToggle}
               >
                 {link.title}
-              </Link>
+              </ScrollLink>
             ))}
           </div>
         </div>
 
         <div className={styles.links}>
           {navList.map((link) => (
-            <Link key={link.id} href={link.url} className={styles.link}>
+            // <Link key={link.id} href={link.url} className={styles.link}>
+            //   {link.title}
+            // </Link>
+            <ScrollLink
+              to={link.linkId}
+              key={link.id}
+              className={styles.link}
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              style={{ cursor: "pointer" }}
+            >
               {link.title}
-            </Link>
+            </ScrollLink>
           ))}
         </div>
       </div>

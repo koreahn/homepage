@@ -42,7 +42,7 @@ a {
 }
 
 .bodyContainer {
-  margin-top: 100px; /* 네비게이션 바의 높이에 맞게 변경 */
+  margin-top: 100px;
 }
 
 @media (max-width: 480px) {

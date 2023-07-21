@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
+import Category from "./[category]/page";
 
-const Portfolio = () => {
+const Business = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.selectTitle}>Our Business</h1>
@@ -14,7 +15,8 @@ const Portfolio = () => {
         - We’ve witnessed many problems on the street in India and we’re going
         to resolve the problems by Tech solution.
       </p>
-      <div className={styles.items}>
+      <Category params={{ category: "Business" }} />
+      {/* <div className={styles.items}>
         <Link href="/business/Business" className={styles.item}>
           <span className={styles.title}>Business Overview</span>
         </Link>
@@ -27,9 +29,9 @@ const Portfolio = () => {
         <Link href="/business/Market" className={styles.item}>
           <span className={styles.title}>Market Overview</span>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
 
-export default Portfolio;
+export default Business;

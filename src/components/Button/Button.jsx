@@ -1,18 +1,19 @@
 import React from "react";
-import Link from "next/link";
+// import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 import styles from "./button.module.css";
 
 const Button = ({ text, url, submitEvent }) => {
   return (
-    <Link href={url}>
+    <ScrollLink to={url} spy={true} smooth={true} offset={-100} duration={500}>
       <button
         className={styles.container}
-        onClick={submitEvent ? submitEvent : "#"}
+        onClick={submitEvent ? submitEvent : null}
         type={submitEvent ? "submit" : "button"}
       >
         {text}
       </button>
-    </Link>
+    </ScrollLink>
   );
 };
 

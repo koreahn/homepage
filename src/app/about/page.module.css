@@ -35,6 +35,11 @@
   gap: 30px;
 }
 
+.selectTitle {
+  margin: 20px 0px;
+  color: #53c28b;
+}
+
 .desc {
   font-size: 18px;
   font-weight: 300;
