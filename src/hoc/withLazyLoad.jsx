@@ -2,7 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 const withLazyLoad = (WrappedComponent, threshold = 0.5) => {
-  return (props) => {
+  // return (props) => {
+  const LazyLoadedComponent = (props) => {
     const [isInView, ref] = useIntersectionObserver(threshold);
     const [hasLoaded, setHasLoaded] = useState(false);
     useEffect(() => {
@@ -14,5 +15,9 @@ const withLazyLoad = (WrappedComponent, threshold = 0.5) => {
       <div ref={ref}>{hasLoaded ? <WrappedComponent {...props} /> : null}</div>
     );
   };
+  LazyLoadedComponent.displayName = `withLazyLoad(${
+    WrappedComponent.displayName || WrappedComponent.name || "Component"
+  })`;
+  return LazyLoadedComponent;
 };
 export default withLazyLoad;
