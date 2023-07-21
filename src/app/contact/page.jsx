@@ -58,9 +58,8 @@ const Contact = () => {
         (error) => {
           console.log(error.text);
           alert(
-            "Failed to send email.\n\nPlease contact us using the next page.(About Us)"
+            "Failed to send email.\n\nPlease contact us using 'About Us' page."
           );
-          window.location.href = "/about";
         }
       );
   };
