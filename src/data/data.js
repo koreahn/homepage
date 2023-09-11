@@ -23,6 +23,12 @@ export const navList = [
     url: "/contact",
     linkId: "contact",
   },
+  {
+    id: 6,
+    title: "List of food carts",
+    url: "/foodCarts",
+    linkId: "foodCarts",
+  },
 ];
 
 export const homeList = [

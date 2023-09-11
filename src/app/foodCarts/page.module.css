@@ -1,0 +1,26 @@
+.container {
+  /* display: flex; */
+  align-items: center;
+  /* gap: 100px; */
+  padding-bottom: 20px;
+}
+
+.item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* gap: 50px; */
+  margin: 20px 0px;
+  padding-left: 20px;
+}
+
+.desc {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.selectTitle {
+  margin: 20px 0px;
+  color: #53c28b;
+}

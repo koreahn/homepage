@@ -6,6 +6,7 @@ import Home from "./home/page";
 import Business from "./business/page";
 import About from "./about/page";
 import Contact from "./contact/page";
+import FoodCarts from "./foodCarts/page";
 
 const Main = () => {
   const businessRef = useRef();
@@ -42,6 +43,13 @@ const Main = () => {
         className={`${styles.page} ${isContactRef ? styles.transparent : ""}`}
       >
         <Contact />
+      </div>
+      <div
+        id="foodCarts"
+        ref={contactRef}
+        className={`${styles.page} ${isContactRef ? styles.transparent : ""}`}
+      >
+        <FoodCarts />
       </div>
     </div>
   );
