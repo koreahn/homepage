@@ -112,6 +112,15 @@
   }
 }
 
+@media (max-width: 850px) {
+  .links {
+    display: none;
+  }
+  .burgerMenu {
+    display: flex;
+  }
+}
+
 /* @media (max-width: 480px) {
   .container {
     padding: 0 30px;
